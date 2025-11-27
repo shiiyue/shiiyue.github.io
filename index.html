@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yue Shi | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Yue Shi - IT student based in Australia.">
+
+    <!-- ======================
+         全站基础样式（中文注释）
+         ====================== -->
+    <style>
+        :root {
+            --bg: #0f172a;
+            --bg-soft: #111827;
+            --card: #020617;
+            --accent: #38bdf8;
+            --accent-soft: rgba(56,189,248,0.15);
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #000 100%);
+            color: var(--text-main);
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+
+        /* ===== 顶部导航 ===== */
+        .nav {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(18px);
+            background: rgba(15,23,42,0.8);
+            border-bottom: 1px solid rgba(148,163,184,0.25);
+        }
+
+        .nav-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 14px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin-left: 16px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #e5e7eb;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px 18px;
+        }
+
+        /* ===== Hero 区 ===== */
+        .hero {
+            margin-bottom: 40px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .hero-title span { color: var(--accent); }
+
+        .hero-sub {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .hero-tags span {
+            display: inline-block;
+            margin-right: 8px;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.4);
+            color: var(--text-muted);
+        }
+
+        /* ===== Section 标题 ===== */
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .section-sub {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+        }
+
+        /* ===== 通用卡片 ===== */
+        .card {
+            background: rgba(15,23,42,0.9);
+            border: 1px solid rgba(148,163,184,0.3);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .card-title { font-size: 16px; font-weight: 600; }
+        .card-meta { font-size: 12px; color: var(--text-muted); }
+        .card-text { font-size: 14px; color: var(--text-muted); margin-top: 6px; }
+
+        .skill-list span {
+            display: inline-block;
+            margin: 4px 6px 0 0;
+            padding: 4px 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.4);
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* ===== 时间轴 ===== */
+        .timeline-item {
+            border-left: 1px solid rgba(148,163,184,0.5);
+            padding-left: 12px;
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -4px;
+            top: 6px;
+            width: 7px;
+            height: 7px;
+            background: var(--accent);
+            border-radius: 999px;
+            box-shadow: 0 0 10px rgba(56,189,248,0.6);
+        }
+    </style>
+</head>
+
+<body>
+<div class="page">
+
+    <!-- ======================
+         导航栏（英文内容）
+         ====================== -->
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="nav-brand">Yue Shi · Portfolio</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <!-- ======================
+                 About 区域（英文内容）
+                 ====================== -->
+            <section id="about" class="hero">
+                <h1 class="hero-title">
+                    Hi, I’m <span>Yue Shi</span>.<br>
+                    An IT student based in Australia.
+                </h1>
+                <p class="hero-sub">
+                    I am currently studying Information Technology in Melbourne, building my foundation
+                    in programming, software development and modern tech tools.  
+                    This website is a growing portfolio documenting my learning journey.
+                </p>
+
+                <div class="hero-tags">
+                    <span>IT student in Australia</span>
+                    <span>Actively learning</span>
+                    <span>Open to opportunities</span>
+                </div>
+            </section>
+
+            <!-- ======================
+                 Skills 技能（中文注释 + 英文内容）
+                 ====================== -->
+            <section id="skills">
+                <h2 class="section-title">Skills & Tools</h2>
+                <p class="section-sub">Continuously improving my technical and soft skills.</p>
+
+                <div class="card">
+                    <div class="card-title">Technical Skills</div>
+                    <div class="card-text">
+                        Currently learning or practicing:
+                    </div>
+                    <div class="skill-list">
+                        <span>Git & GitHub</span>
+                        <span>Basic HTML & CSS</span>
+                        <span>Programming fundamentals</span>
+                        <span>IT foundations</span>
+                        <span>Problem solving</span>
+                        <span>Data & finance basics</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Soft Skills</div>
+                    <div class="skill-list">
+                        <span>Teamwork</span>
+                        <span>Customer service</span>
+                        <span>Time management</span>
+                        <span>Bilingual communication</span>
+                        <span>Adaptability</span>
+                        <span>Fast learning</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================
+                 项目 Project（英文内容）
+                 ====================== -->
+            <section id="projects">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-sub">Starting from small projects and simple practice.</p>
+
+                <div class="card">
+                    <div class="card-title">Personal Portfolio Website</div>
+                    <div class="card-meta">2025 · HTML / CSS · GitHub Pages</div>
+                    <p class="card-text">
+                        A simple personal website hosted on GitHub Pages, showcasing my background, skills and progress.
+                        This page will continue to improve as I learn more.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Study Notes & Mini Projects</div>
+                    <div class="card-meta">Ongoing</div>
+                    <p class="card-text">
+                        A space for future programming exercises, investment course notes, or class projects that can become portfolio pieces.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ======================
+                 经验 Experience（英文内容）
+                 ====================== -->
+            <section id="experience">
+                <h2 class="section-title">Experience & Education</h2>
+
+                <div class="card">
+                    <div class="card-title">Education</div>
+
+                    <div class="timeline-item">
+                        <div class="card-meta">Australia · 2025–2026 (expected)</div>
+                        <p class="card-text">
+                            Postgraduate studies in Information Technology, covering programming, software development
+                            and fundamental technical subjects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Part-time & General Experience</div>
+
+                    <div class="timeline-item">
+                        <p class="card-text">
+                            Experience in retail, customer service and hospitality roles both in China and Australia.
+                            These roles helped me develop communication, teamwork and adaptability.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <p class="card-text">
+                            Participated in student clubs, social media operations, poster design and content layout.
+                            These experiences relate to digital design and communication.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================
+                 Contact（英文内容）
+                 ====================== -->
+            <section id="contact">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-sub">Feel free to reach out for opportunities or collaboration.</p>
+
+                <div class="card">
+                    <div class="skill-list">
+                        <!-- 请把下面邮箱换成你的真实邮箱 -->
+                        <span>Email: shiiyue79@gmail.com</span>
+                        <span>GitHub: <a href="https://github.com/shiiyue">@shiiyue</a></span>
+                    </div>
+                    <p class="card-text">
+                        I am currently building my technical foundation and open to internships,
+                        part-time roles and entry-level opportunities in the tech field.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+</div>
+
+<footer style="text-align:center; padding:20px; color:#9ca3af;">
+    © <span id="year"></span> Yue Shi · Built with GitHub Pages.
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
